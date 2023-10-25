@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="200dp" />
+
+    <Button
+        android:id="@+id/idBotao"
+        android:layout_width="182dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:onClick="segundo"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/idBotao2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBotao2"
+        android:layout_width="172dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
+        android:onClick="primeiro"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idBotao"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/idPrimeiro"
+        android:name="br.unigran.fragments.PrimeiroFragment"
+        android:layout_width="196dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="514dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/idSegundo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBotao" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/idSegundo"
+        android:name="br.unigran.fragments.SegundoFragment"
+        android:layout_width="187dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="514dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idPrimeiro"
+        app:layout_constraintTop_toBottomOf="@+id/idBotao2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
